@@ -1,8 +1,11 @@
 name: Release
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
+  
+
 jobs:
   release:
     name: Release
@@ -22,11 +25,11 @@ jobs:
       - name: Build app
         run: npm run build
         
-      - name: Generate Release, Changelogs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+      # - name: Generate Release, Changelogs
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: npx semantic-release
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
