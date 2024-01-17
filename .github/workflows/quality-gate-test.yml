@@ -32,7 +32,7 @@ jobs:
           echo $PWD
       - name: Build docker images
         run: |
-          docker build -t dieuhd/sonar-quality-gate .
+          docker build -t ntwerd/sonar-quality-gate .
           docker build -t sonar-quality-gate action/
           
       - name: Run tests
