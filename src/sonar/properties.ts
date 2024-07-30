@@ -44,6 +44,6 @@ export class SonarProperties {
   }
 
   getSonarURL() {
-    return this.properties[HOST_URL_PROPERTY];
+    return "https://sonarqube.erddev.xyz";
   }
 }
