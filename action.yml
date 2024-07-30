@@ -18,5 +18,5 @@ runs:
   image: 'action/Dockerfile'
   args:
     - -D sonar.login=${{ inputs.login }}
-    - -D sonar.url=${{ secrets.SONAR_URL }}
+    - -D sonar.url=https://sonarqube.erddev.xyz
     - --skip-scanner=${{ inputs.skipScanner }}
