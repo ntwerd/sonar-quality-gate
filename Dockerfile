@@ -13,4 +13,4 @@ RUN npm run build
 RUN npm i -g
 RUN rm -rf src
 
-CMD sonar-scanner
+CMD sonar-scanner -Dsonar.host.url=https://sonarqube.erddev.xyz
