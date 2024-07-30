@@ -18,4 +18,5 @@ runs:
   image: 'action/Dockerfile'
   args:
     - -D sonar.login=${{ inputs.login }}
+    - -D sonar.url=${{ secrets.SONAR_URL }}
     - --skip-scanner=${{ inputs.skipScanner }}
